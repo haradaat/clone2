@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: murmur_development
+
+
+test:
+  <<: *default
+  database: murmur_test
+
+production:
+  <<: *default
+  database: murmur_production
+  username: murmur
+  password: <%= ENV['MURMUR_DATABASE_PASSWORD'] %>
