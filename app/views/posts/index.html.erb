@@ -1,17 +1,27 @@
-<h1>ブログ一覧</h1>
-<p><%= notice %></p>
-<table>
-    <tr>
-        <th>タイトル</th>
-        <th>内容</th>
-    </tr>
-<% @posts.each do |post| %>
-    <tr>
-        <td><%= post.content %></td>
-        <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
-        <td><%= link_to 'ブログを編集する', edit_post_path(post.id) %></td>
-        <td><%= link_to 'ブログを削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除してもいいですか？'} %></td>
-    </tr>
-<% end %>
-</table>
-<%= link_to '新しくブログを投稿する',new_post_path %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSSサンプル</title>
+        <link rel="stylesheet" href="normalize.css">
+        <%= stylesheet_link_tag "posts", :media => "all" %>
+    </head>
+    <body>
+        <h1>ブログ一覧</h1>
+        <p class="abc"><%= notice %></p>
+        <table>
+            <tr>
+                <th>内容</th>
+            </tr>
+        <% @posts.each do |post| %>
+            <tr>
+                <td><%= post.content %></td>
+                <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
+                <td><%= link_to 'ブログを編集する', edit_post_path(post.id) %></td>
+                <td><%= link_to 'ブログを削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除してもいいですか？'} %></td>
+            </tr>
+        <% end %>
+        </table>
+            <strong><%= link_to 'Murmur',new_post_path %></strong>
+    </body>
+</html>
