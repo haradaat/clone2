@@ -4,7 +4,12 @@
 body{
     background-color:#000000;
 }
-h1 , h2 , h3 {
+h1 {
+    color: #ffffff;
+    margin: 0;
+}
+
+h2 , h3 {
     color: #ffffff;
 }
 tr {
@@ -19,5 +24,17 @@ strong{
     color: #ffffff;
 }
 .abc , .post_title , .error_explanation{
+    color: #ffffff;
+}
+header{
+    background-color: #0616f8;
+    margin: 0;
+    padding: 0;
+}
+footer{
+    background-color: #0616f8;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     color: #ffffff;
 }
