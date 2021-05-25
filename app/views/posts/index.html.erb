@@ -7,7 +7,9 @@
         <%= stylesheet_link_tag "posts", :media => "all" %>
     </head>
     <body>
+    <header>
         <h1>ブログ一覧</h1>
+    </header>
         <p class="abc"><%= notice %></p>
         <table>
             <tr>
@@ -22,6 +24,8 @@
             </tr>
         <% end %>
         </table>
+    <footer>
             <strong><%= link_to 'Murmur',new_post_path %></strong>
+    </footer>
     </body>
 </html>
